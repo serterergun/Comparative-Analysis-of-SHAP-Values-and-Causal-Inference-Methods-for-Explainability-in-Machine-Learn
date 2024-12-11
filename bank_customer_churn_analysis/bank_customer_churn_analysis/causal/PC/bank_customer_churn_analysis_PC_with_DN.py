@@ -18,7 +18,7 @@ df = pd.get_dummies(df, columns=['Gender','Geography'], drop_first=True)
 for column in df.columns:
     df[column] = pd.to_numeric(df[column], errors='coerce')
 if df.isnull().sum().sum() > 0:
-    df.fillna(df.mean(), inplace=True)
+    df.fillna(df.mean(), inplace=True) #aaaaaaaa
 
 # Convert all columns to float64 to ensure compatibility with np.isnan
 df = df.astype(np.float64)
